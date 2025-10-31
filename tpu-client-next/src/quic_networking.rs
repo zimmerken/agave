@@ -32,9 +32,9 @@ pub(crate) fn create_client_config(client_certificate: &QuicClientCertificate) -
     let transport_config = {
         let mut res = TransportConfig::default();
 
-        let timeout = IdleTimeout::try_from(Duration::from_millis(100)).unwrap();
+        let timeout = IdleTimeout::try_from(Duration::from_millis(1000)).unwrap();
         res.max_idle_timeout(Some(timeout));
-        res.keep_alive_interval(Some(Duration::from_millis(50)));
+        res.keep_alive_interval(Some(Duration::from_millis(200)));
         res.send_fairness(QUIC_SEND_FAIRNESS);
 
         res
