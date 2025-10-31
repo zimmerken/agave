@@ -34,7 +34,7 @@ pub(crate) const DEFAULT_MAX_CONNECTION_HANDSHAKE_TIMEOUT: Duration = Duration::
 /// Interval between retry attempts for creating a new connection. This value is
 /// a best-effort estimate, based on current network conditions.
 const RETRY_SLEEP_INTERVAL: Duration =
-    Duration::from_millis(NUM_CONSECUTIVE_LEADER_SLOTS * DEFAULT_MS_PER_SLOT);
+    Duration::from_millis(1);
 
 /// Maximum age (in milliseconds) of a blockhash, beyond which transaction
 /// batches are dropped.
