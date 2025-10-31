@@ -11,7 +11,7 @@ use {
     solana_tls_utils::tls_client_config_builder,
     std::sync::Arc,
 };
-
+use std::time::Duration;
 pub mod error;
 
 pub use {
